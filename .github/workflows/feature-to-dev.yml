@@ -3,7 +3,7 @@ name: Feature → Dev
 on:
   pull_request:
     branches: [dev]
-    types: [closed]
+    types: [opened, synchronize, reopened]
 
 jobs:
   extract-task:
