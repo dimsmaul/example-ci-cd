@@ -7,7 +7,6 @@ on:
 
 jobs:
   extract-all-tasks:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     outputs:
       task_codes: ${{ steps.extract.outputs.task_codes }}
