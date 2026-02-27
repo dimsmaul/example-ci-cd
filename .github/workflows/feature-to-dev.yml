@@ -75,6 +75,6 @@ jobs:
       - name: Hit /api/task-failed/:code → fixing
         run: |
           curl -s -o /dev/null -w "%{http_code}" \
-            -X POST "${{ secrets.TASK_API_URL }}/api/task-failed/${{ needs.extract-task.outputs.task_code }}" \
+            -X POST "https://task-management-ci-cd.vercel.app/api/task-failed/${{ needs.extract-task.outputs.task_code }}" \
             -H "Authorization: Bearer ${{ secrets.TASK_API_TOKEN }}" \
             -H "Content-Type: application/json"
